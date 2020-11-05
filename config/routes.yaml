@@ -1,3 +1,41 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+login:
+    path: /login
+    controller: App\Controller\LoginController::loginAction
+
+register:
+    path: /register
+    controller: App\Controller\RegisterController::registerAction
+
+home:
+    path: /home
+    controller: App\Controller\HomeController::__construct
+
+logout:
+    path: /logout
+    controller: App\Controller\HomeController::logout
+
+# CRUD routes:
+user_create:
+    path: /user
+    controller: App\Controller\UserController::createUser
+    methods:  [POST]
+
+user_view:
+    path: /user
+    controller: App\Controller\UserController::viewUser
+    methods:  [GET]
+
+user_get:
+    path: /users
+    controller: App\Controller\UserController::showUsers
+    methods:  [GET]
+
+user_delete:
+    path: /user
+    controller: App\Controller\UserController::deleteUser
+    methods:  [DELETE]
+
+user_update:
+    path: /user
+    controller: App\Controller\UserController::updateUser
+    methods:  [PATCH]
